@@ -1553,19 +1553,19 @@ section,
   font-size: 1.1rem;
   transition: all 0.3s ease;
   border: 2px solid white;
+  white-space: nowrap; /* Empêche la division sur plusieurs lignes */
+  min-width: fit-content; /* S'adapte au contenu */
+}
+
+.emergency-btn .phone-number {
+  display: inline-block;
+  white-space: nowrap; /* Garde le numéro sur une seule ligne */
 }
 
 .emergency-btn:hover {
   background: transparent;
   color: white;
   transform: translateY(-2px);
-}
-
-.emergency-btn small {
-  font-size: 0.8rem;
-  font-weight: normal;
-  opacity: 0.8;
-  margin-left: 5px;
 }
 
 /* Responsive */
@@ -1602,8 +1602,38 @@ section,
   .about-features {
     padding: 20px;
   }
+  
+  /* Correction spécifique pour mobile */
+  .emergency-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .emergency-btn .phone-number {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px; /* Espacement pour meilleure lisibilité */
+  }
 }
 
+@media (max-width: 480px) {
+  .emergency-box {
+    padding: 20px 15px;
+  }
+  
+  .emergency-btn {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+  }
+  
+  .emergency-btn .phone-number {
+    font-size: 1rem;
+  }
+}
 /*--------------------------------------------------------------
 # Services Section - INFIRMERIE 24
 --------------------------------------------------------------*/
