@@ -407,70 +407,146 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer
+# Global Footer - INFIRMERIE 24
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   font-size: 14px;
-  padding-bottom: 50px;
+  padding-bottom: 0;
   position: relative;
 }
 
 .footer .footer-top {
-  padding-top: 50px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  padding-top: 60px;
+  padding-bottom: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
-}
-
-.footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  margin-bottom: 20px;
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
-  font-size: 30px;
+  color: white;
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-family: var(--heading-font);
+  background: linear-gradient(90deg, #4dabf7, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.footer .footer-about p {
+.footer .footer-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+}
+
+/* Emergency section in footer */
+.emergency-footer {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.emergency-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #ff6b6b;
   font-size: 14px;
-  font-family: var(--heading-font);
+}
+
+.emergency-label i {
+  font-size: 16px;
+}
+
+.emergency-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.emergency-number:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+  color: white;
+}
+
+.emergency-note {
+  display: block;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+}
+
+/* Social links */
+.footer .social-links {
+  margin-top: 25px;
 }
 
 .footer .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin-right: 10px;
-  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
+  background: var(--accent-color);
+  color: white;
   border-color: var(--accent-color);
+  transform: translateY(-3px);
 }
 
+/* Footer headings */
 .footer h4 {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
   position: relative;
   padding-bottom: 12px;
+  margin-bottom: 20px;
 }
 
+.footer h4:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* Footer links */
 .footer .footer-links {
   margin-bottom: 30px;
 }
@@ -481,14 +557,8 @@ h6 {
   margin: 0;
 }
 
-.footer .footer-links ul i {
-  padding-right: 2px;
-  font-size: 12px;
-  line-height: 0;
-}
-
 .footer .footer-links ul li {
-  padding: 10px 0;
+  padding: 8px 0;
   display: flex;
   align-items: center;
 }
@@ -498,34 +568,181 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: rgba(255, 255, 255, 0.7);
   display: inline-block;
-  line-height: 1;
+  line-height: 1.5;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer .footer-links ul a:before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: white;
+  padding-left: 20px;
+  text-decoration: none;
 }
 
-.footer .footer-contact p {
+.footer .footer-links ul a:hover:before {
+  transform: translateX(5px);
+}
+
+/* Contact items */
+.contact-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.contact-item i {
+  color: var(--accent-color);
+  font-size: 20px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contact-item div {
+  flex: 1;
+}
+
+.contact-item strong {
+  color: white;
+  font-size: 14px;
+  display: block;
   margin-bottom: 5px;
 }
 
+.contact-item p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.contact-item small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  display: block;
+  margin-top: 3px;
+}
+
+/* Copyright */
 .footer .copyright {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 25px 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.certifications {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.cert-badge {
+  background: rgba(77, 171, 247, 0.1);
+  color: #4dabf7;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(77, 171, 247, 0.3);
 }
 
 .footer .copyright p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer .copyright .sitename {
+  color: white;
+  font-weight: 700;
 }
 
 .footer .credits {
-  margin-top: 6px;
+  margin-top: 10px;
   font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
+.footer .credits a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .credits a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer .footer-about .logo span {
+    font-size: 24px;
+  }
+  
+  .certifications {
+    gap: 10px;
+  }
+  
+  .cert-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .footer-top {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  
+  .footer h4 {
+    font-size: 16px;
+  }
+  
+  .contact-item {
+    gap: 10px;
+  }
+  
+  .emergency-number {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  .footer .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .footer-links {
+    margin-bottom: 20px;
+  }
+  
+  .certifications {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer .copyright p {
+    font-size: 13px;
+  }
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1997,204 +2214,420 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-  padding: 30px;
+/*--------------------------------------------------------------
+# Contact Section - INFIRMERIE 24
+--------------------------------------------------------------*/
+.contact {
+  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
 }
 
-.contact .info-item i {
-  font-size: 38px;
-  line-height: 0;
-  color: var(--accent-color);
+.contact .section-title p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Emergency Banner */
+.emergency-banner {
+  background: linear-gradient(135deg, #dc3545 0%, #e35d6a 100%);
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-bottom: 40px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(220, 53, 69, 0.3);
+}
+
+.emergency-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.emergency-icon {
+  background: rgba(255, 255, 255, 0.2);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.emergency-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.emergency-text p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.emergency-number {
+  flex-shrink: 0;
+}
+
+.emergency-phone {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  color: #dc3545;
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  min-width: 180px;
+}
+
+.emergency-phone:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.emergency-phone i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.emergency-phone .number {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.emergency-phone small {
+  font-size: 0.8rem;
+  font-weight: normal;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* Info Items */
+.contact .info-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+}
+
+.contact .info-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+}
+
+.contact .info-item .info-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-color), #4dabf7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .contact .info-item h3 {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 20px 0 10px 0;
+  margin-bottom: 15px;
+  color: #1a1a1a;
 }
 
 .contact .info-item p {
   padding: 0;
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #555;
 }
 
-.contact .php-email-form {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
-  padding: 30px;
+.contact .info-item p strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.contact .info-item .info-note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Contact Extra */
+.contact-extra {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-extra h4 {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-extra ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-extra li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #555;
+}
+
+.contact-extra li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   height: 100%;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-.portfolio-details .portfolio-info {
-  background-color: var(--surface-color);
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
+.form-title {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
-.portfolio-details .portfolio-info ul {
-  list-style: none;
+.form-subtitle {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.contact .php-email-form {
   padding: 0;
-  font-size: 15px;
+  background: transparent;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
+.contact .php-email-form input[type="tel"],
+.contact .php-email-form textarea,
+.contact .php-email-form select {
+  font-size: 15px;
+  padding: 12px 15px;
+  box-shadow: none;
+  border-radius: 8px;
+  color: #333;
+  background-color: white;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
+.contact .php-email-form input[type="tel"]:focus,
+.contact .php-email-form textarea:focus,
+.contact .php-email-form select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.1);
+  background-color: #fff;
+}
+
+.contact .php-email-form .form-hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* Service Checkboxes */
+.service-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   margin-top: 10px;
 }
 
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
-.service-details .services-list {
-  background-color: var(--surface-color);
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
-}
-
-.service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.service-details h4 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.service-details p {
-  font-size: 15px;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
+.checkbox-option {
   display: flex;
   align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
 }
 
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
+.checkbox-option:hover {
+  background: #e9ecef;
+  border-color: #ddd;
+}
+
+.checkbox-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox-option span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Consent checkbox */
+.checkbox-option.consent {
+  background: transparent;
+  border: none;
+  padding: 0;
+  align-items: flex-start;
+}
+
+.checkbox-option.consent span {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.checkbox-option.consent a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.checkbox-option.consent a:hover {
+  text-decoration: underline;
+}
+
+/* Submit button */
+.submit-btn {
+  background: linear-gradient(135deg, var(--accent-color), #4dabf7);
+  color: white;
+  border: 0;
+  padding: 15px 40px;
+  transition: 0.4s;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #1a6bc3, var(--accent-color));
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(77, 171, 247, 0.3);
+}
+
+.response-time {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.response-time i {
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+/* Responsive */
+@media (max-width: 992px) {
+  .emergency-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .emergency-phone {
+    margin-top: 15px;
+  }
+  
+  .service-checkboxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 25px 20px;
+    margin-top: 30px;
+  }
+  
+  .contact .info-item {
+    padding: 25px 20px;
+  }
+  
+  .emergency-banner {
+    padding: 20px;
+  }
+  
+  .emergency-phone {
+    min-width: auto;
+    padding: 12px 20px;
+  }
+  
+  .emergency-phone .number {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact .info-item .info-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
