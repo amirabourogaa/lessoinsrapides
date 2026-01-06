@@ -115,12 +115,6 @@ Charte de confidentialité signée
 
 Transmission sécurisée des informations
 
-💼 INFORMATIONS LÉGALES
-SIRET : [À COMPLÉTER]
-N° Agrément : [À COMPLÉTER]
-Assurance RC Pro : [À COMPLÉTER]
-Protection des données : Conforme au RGPD
-
 📱 CONTACTS URGENTS
 Urgence médicale : 25 167 131
 WhatsApp : 25 167 131
